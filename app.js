@@ -20,25 +20,13 @@ app.engine('jsx', require('express-react-views').createEngine())
 
 // ^ Defining Routes
 app.use('/blog', require('./controllers/BlogRouter'))
+app.use('/user', require('./controllers/UserRouter'))
 
 
 app.get('/', (req, res) => {
     res.send('Hello')
 })
 
-
-// app.get('/', (req, res) => {
-//     Blog.find({}, (error, blogsFromDB) => {
-//         if (error){
-//             console.log(error)
-//         }
-//         console.log(blogsFromDB)
-//             res.render('./blogs/Index', {
-//                 blog: blogsFromDB
-//         })
-//     })
-//     // res.send('Hello Universe!')
-// })
 
 app.listen(PORT, () => {
     console.log(`Server is running on port: ${PORT}`)
