@@ -6,7 +6,7 @@ const router = express.Router()
 router.get('/', async(req, res) => {
     try {
         const users = await UserModel.find({})
-        res.send(`Hello Users!`)
+        res.send(users)
     } catch(error){
         console.log(error)
         res.status(403).send('Cannot get blog')
@@ -16,11 +16,11 @@ router.get('/', async(req, res) => {
 
 router.get('/:id', async (req, res) => {
     try {
-        const user = await BlogModel.findById(req.params.id)
+        const user = await UserModel.findById(req.params.id)
         res.send(user)
     } catch(error){
         console.log(error)
-        res.status(403).send('Cannot get blog')
+        res.status(403).send('Cannot get user')
     }
 })
 
@@ -29,6 +29,13 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
     // ^ Try-Catch Method
     try {
+        // ^ Below checks if a user already exists
+        const userAlreadyExists = await UserModel.find({email: req.body.email})
+        console.log(userAlreadyExists)
+        if (userAlreadyExists[0]){
+            return res.send('This email is already in use. Please try to login using this email.')
+        }
+        // ^ Below creates a new user
         const newUser = await UserModel.create(req.body)
         res.send(newUser)
     } catch(error) {
@@ -39,48 +46,29 @@ router.post('/', async (req, res) => {
 
 })
 
-// // ^ PUT: Update by ID
-// router.put('/:id/edit', async (req, res) => {
-//     try {
-//         const updatedBlog = await BlogModel.findByIdAndUpdate(req.params.id, req.body, {'returnDocument': 'after'})
-//         res.send(updatedBlog)
-//     } catch(error) {
-//         console.log(error)
-//         res.status(403).send('Cannot update')
-//     }
-// })
+// ^ PUT: Update by ID
+router.put('/:id/edit', async (req, res) => {
+    try {
+        const updatedUser = await UserModel.findByIdAndUpdate(req.params.id, req.body, {'returnDocument': 'after'})
+        res.send(updatedUser)
+    } catch(error) {
+        console.log(error)
+        res.status(403).send('Cannot update')
+    }
+})
 
 
-// // ^ Delete
-// router.delete('/:id', async(req, res) =>{
-//     try {
-//         const deletedBlog = await BlogModel.findByIdAndRemove(req.params.id)
-//         res.send('Blog Deleted')
-//     } catch(error) {
-//         console.log(error)
-//         res.status(403).send('Cannot update')
-//     }
-// })
+// ^ DELETE: Delete user by ID
+router.delete('/:id/delete', async(req, res) =>{
+    try {
+        const deletedUser = await UserModel.findByIdAndRemove(req.params.id)
+        res.send('User Deleted')
+    } catch(error) {
+        console.log(error)
+        res.status(403).send('Cannot update')
+    }
+})
 
-
-
-
-
-
-// ^ Dot Then Method
-// router.post('/', (req, res) => {
-//     // ^ Create New Blow
-//     BlogModel.create(req.body)
-//     .then(data => {
-//         console.log(data)
-//         res.send(data)
-//     })
-//     // ^ Catch error if any
-//     .catch(error => {
-//         console.log(error)
-//         res.status(403).send('Cannot create.')
-//     })
-// })
 
 
 module.exports = router

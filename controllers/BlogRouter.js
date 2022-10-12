@@ -6,13 +6,18 @@ const router = express.Router()
 router.get('/', async(req, res) => {
     try {
         const blogs = await BlogModel.find({})
-        res.send(blogs)
+        // res.send(blogs)
+        res.render('blogs/Blogs', {blogs: blogs})
     } catch(error){
         console.log(error)
         res.status(403).send('Cannot get blog')
     }
 })
 
+// ^ Render New Blog Form
+router.get('/new', (req, res) => {
+    res.render('blogs/New')
+})
 
 router.get('/:id', async (req, res) => {
     try {
@@ -24,13 +29,34 @@ router.get('/:id', async (req, res) => {
     }
 })
 
-// ^ POST: Create A New Blog
+// ^ POST: Create A New Blog Backup
 
+// router.post('/', async (req, res) => {
+//     // ^ Try-Catch Method
+//     try {
+//         const newBlog = await BlogModel.create(req.body)
+//         res.send(newBlog)
+//     } catch(error) {
+//         console.log(error)
+//         res.status(403).send('Cannot create')
+
+//     }
+
+// })
+
+// ^ Create a new Blog
 router.post('/', async (req, res) => {
     // ^ Try-Catch Method
     try {
+        // if (req.body.sponsored === 'on') {
+        //     req.body.sponsored === true
+        // } else {
+        //     req.body.sponsored === false
+        // }
         const newBlog = await BlogModel.create(req.body)
-        res.send(newBlog)
+        console.log(newBlog)
+        res.redirect('/blog')
+        // res.send('Blog successfully created!')
     } catch(error) {
         console.log(error)
         res.status(403).send('Cannot create')
@@ -38,6 +64,7 @@ router.post('/', async (req, res) => {
     }
 
 })
+
 
 // ^ PUT: Update by ID
 router.put('/:id/edit', async (req, res) => {
