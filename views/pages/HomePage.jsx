@@ -1,4 +1,5 @@
 const React = require('react')
+const Navbar = require('../components/Navbar')
 
 class HomePage extends React.Component{
     render(){
@@ -6,8 +7,9 @@ class HomePage extends React.Component{
             <head>
                 <link rel='stylesheet' href='/CSS/app.css'></link>
             </head>
-            <h1>Welcome to my Blog App!</h1>
-
+            <Navbar />
+            <h1>As You Are</h1>
+            <h3>Discovering ourselves, together.</h3>
 
 
 

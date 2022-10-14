@@ -19,10 +19,11 @@ router.get('/new', (req, res) => {
     res.render('blogs/New')
 })
 
+
 router.get('/:id', async (req, res) => {
     try {
         const blog = await BlogModel.findById(req.params.id)
-        res.send(blog)
+        res.render('blogs/ShowBlogs', {blog: blog})
     } catch(error){
         console.log(error)
         res.status(403).send('Cannot get blog')
@@ -48,11 +49,6 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
     // ^ Try-Catch Method
     try {
-        // if (req.body.sponsored === 'on') {
-        //     req.body.sponsored === true
-        // } else {
-        //     req.body.sponsored === false
-        // }
         const newBlog = await BlogModel.create(req.body)
         console.log(newBlog)
         res.redirect('/blog')
@@ -65,7 +61,6 @@ router.post('/', async (req, res) => {
 
 })
 
-
 // ^ PUT: Update by ID
 router.put('/:id/edit', async (req, res) => {
     try {
@@ -76,7 +71,6 @@ router.put('/:id/edit', async (req, res) => {
         res.status(403).send('Cannot update')
     }
 })
-
 
 // ^ Delete
 router.delete('/:id', async(req, res) =>{

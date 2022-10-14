@@ -1,9 +1,10 @@
 const React = require("react")
 const Navbar = require('../components/Navbar')
 
-class Blogs extends React.Component {
+class ShowBlogs extends React.Component {
   render() {
-    const { blogs } = this.props
+    const  blog  = this.props.blog
+    console.log(blog)
     return (
       <div>
         <head>
@@ -12,24 +13,20 @@ class Blogs extends React.Component {
         <Navbar />
 
         <h1 style ={styles.header}>Blog Posts</h1>
-        <a style ={styles.createPostLink} href='/blog/new'>Create New Post!</a>
-        <div>
-          <ul style={styles.timeline}>
-            {blogs.map((blog, idx) => (
-              <li style={styles.item} key={idx}>
-                {" "}
-                <h3>{'@'+ blog.author}</h3>
-                <a href={`blog/${blog._id}`}><h2>{blog.title}</h2></a>
-                <p>{blog.body}</p>
-                <p style={styles.likes}>&hearts; {blog.likes}</p>
-              </li>
-            ))}
-          </ul>
+        <div style={styles.item} key={''}>
+              {" "}
+              <h3>{'@'+ blog.author}</h3>
+              <h2>{blog.title}</h2>
+              <p>{blog.body}</p>
+              <p style={styles.likes}>&hearts; {blog.likes}</p>
         </div>
+        <a style ={styles.createPostLink} href='/blog/new'>Create New Post!</a>
       </div>
-    );
+    )
   }
 }
+
+module.exports = ShowBlogs
 
 const styles = {
   container: {
@@ -70,7 +67,7 @@ const styles = {
     listStyleType: 'none',
     border: '2px solid rgba(0, 0, 150, 0.3)',
     margin: '10px',
-    width: '100%'
+    width: 'auto'
   },
   likes: {
     display: 'inline-block',
@@ -81,5 +78,4 @@ const styles = {
   }
 }
 
-module.exports = Blogs
 
