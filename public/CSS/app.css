@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa%7CRighteous');
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: 100%;
+}
+
+
 body {
   background-color: white;
   font-family: 'Helvetica', cursive;
+
 }
 
 
@@ -10,10 +19,19 @@ body {
   display: flex;
   justify-content: space-between;
   font-family: "Helvetica";
-  background-color: antiquewhite;
+  background-color: white;
 
 }
 
+textarea {
+  text-align: center;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 h1 {
   font-family: 'Helvetica';
@@ -47,7 +65,7 @@ li {
 }
 
 li a {
-  color: mediumseagreen;
+  color: blueviolet;
 }
 
 input[type=text] {

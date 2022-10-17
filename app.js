@@ -2,8 +2,11 @@ const express = require('express')
 const mongoose = require('mongoose')
 const morgan = require('morgan')
 const Blog = require('./models/BlogSchema')
+const session = require('express-session')   
+const MongStore = require('connect-mongo')
 require('dotenv').config()
 const methodOverride = require('method-override')
+const MongoStore = require('connect-mongo')
 
 const app = express()
 
@@ -15,6 +18,13 @@ app.use(express.json())
 // ^ Below needed whenever setting up a new form - to read data from post request
 app.use(express.urlencoded({ extended: false }))
 app.use(methodOverride('_method'))
+app.use(session({
+    secret: process.env.SECRET,
+    store: MongoStore.create({mongoUrl: process.env.MONGO_URI}),
+    resave: false,
+    saveUninitialized: true
+}))
+
 app.use((req, res, next) => {
     console.log('I run for all routes')
     // ^
@@ -29,7 +39,7 @@ app.engine('jsx', require('express-react-views').createEngine())
 
 // ^ Defining Routes
 app.use('/blog', require('./controllers/BlogRouter'))
-app.use('/user', require('./controllers/UserRouter'))
+app.use('/users', require('./controllers/UserRouter'))
 
 
 app.get('/', (req, res) => {

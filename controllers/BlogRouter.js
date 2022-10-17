@@ -1,13 +1,25 @@
+const { application } = require('express')
 const express = require('express')
 const BlogModel = require('../models/BlogSchema')
 
 const router = express.Router()
 
+// * Add privacy to router
+
+router.use((req, res, next) => {
+    if(req.session.loggedIn) {
+        next()
+    } else {
+        res.redirect('/users/signin')
+    }
+})
+
 router.get('/', async(req, res) => {
     try {
         const blogs = await BlogModel.find({})
         // res.send(blogs)
-        res.render('blogs/Blogs', {blogs: blogs})
+        // ^ Below renders blogs 
+        res.render('blogs/Blogs', {blogs: blogs, loggedInUser: req.session.username})
     } catch(error){
         console.log(error)
         res.status(403).send('Cannot get blog')
@@ -41,6 +53,8 @@ router.post('/', async (req, res) => {
         } else {
             req.body.sponsored = false
         }
+        // ^ Below changes blog author to username
+        req.body.author = req.session.username
         const newBlog = await BlogModel.create(req.body)
         console.log(newBlog)
         res.redirect('/blog')
@@ -59,7 +73,7 @@ router.get('/:id/edit', async (req, res) => {
     res.render('blogs/Edit', {blog: blog})
 })
 
-// ^ PUT: Update by ID
+// ^ PUT: Edit Blog
 router.put('/:id', async (req, res) => {
     try {
         if (req.body.sponsored === 'on') {

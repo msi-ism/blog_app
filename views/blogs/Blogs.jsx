@@ -3,7 +3,8 @@ const Navbar = require('../components/Navbar')
 
 class Blogs extends React.Component {
   render() {
-    const { blogs } = this.props
+    const { blogs, loggedInUser } = this.props
+    console.log(loggedInUser)
     return (
       <div>
         <head>
@@ -22,10 +23,10 @@ class Blogs extends React.Component {
                 <a href={`blog/${blog._id}`}><h2>{blog.title}</h2></a>
                 <p>{blog.body}</p>
                 <p style={styles.likes}>&hearts; {blog.likes}</p>
-                <a style={styles.createPostLink} href={`blog/${blog._id}/edit`}>Edit Post!</a>
-                <form action={`/blog/${blog._id}?_method=DELETE`} method='POST'>
+                {blog.author === loggedInUser ? (<a style={styles.createPostLink} href={`blog/${blog._id}/edit`}>Edit Post!</a>) : null }
+                {blog.author === loggedInUser ? (<form action={`/blog/${blog._id}?_method=DELETE`} method='POST'>
                     <input type='submit' value='Delete post!' />
-                </form>
+                </form>) : null }
               </li>
             ))}
           </ul>
