@@ -25,6 +25,6 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     fontFamily: "Helvetica",
-    backgroundColor: "antiquewhite",
+    backgroundColor: "white",
   },
 };

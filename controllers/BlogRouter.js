@@ -32,23 +32,15 @@ router.get('/:id', async (req, res) => {
 
 // ^ POST: Create A New Blog Backup
 
-// router.post('/', async (req, res) => {
-//     // ^ Try-Catch Method
-//     try {
-//         const newBlog = await BlogModel.create(req.body)
-//         res.send(newBlog)
-//     } catch(error) {
-//         console.log(error)
-//         res.status(403).send('Cannot create')
-
-//     }
-
-// })
-
 // ^ Create a new Blog
 router.post('/', async (req, res) => {
     // ^ Try-Catch Method
     try {
+        if (req.body.sponsored === 'on') {
+            req.body.sponsored = true
+        } else {
+            req.body.sponsored = false
+        }
         const newBlog = await BlogModel.create(req.body)
         console.log(newBlog)
         res.redirect('/blog')
@@ -61,22 +53,35 @@ router.post('/', async (req, res) => {
 
 })
 
+// ^ GET: Edit Page
+router.get('/:id/edit', async (req, res) => {
+    const blog = await BlogModel.findById(req.params.id)
+    res.render('blogs/Edit', {blog: blog})
+})
+
 // ^ PUT: Update by ID
-router.put('/:id/edit', async (req, res) => {
+router.put('/:id', async (req, res) => {
     try {
+        if (req.body.sponsored === 'on') {
+            req.body.sponsored = true
+        } else {
+            req.body.sponsored = false
+        }
         const updatedBlog = await BlogModel.findByIdAndUpdate(req.params.id, req.body, {'returnDocument': 'after'})
-        res.send(updatedBlog)
+        res.redirect('/blog')
     } catch(error) {
         console.log(error)
-        res.status(403).send('Cannot update')
+        res.status(403).send('Cannot update blog')
     }
 })
+
+
 
 // ^ Delete
 router.delete('/:id', async(req, res) =>{
     try {
         const deletedBlog = await BlogModel.findByIdAndRemove(req.params.id)
-        res.send('Blog Deleted')
+        res.redirect('/blog')
     } catch(error) {
         console.log(error)
         res.status(403).send('Cannot update')

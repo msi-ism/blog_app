@@ -10,8 +10,8 @@ class HomePage extends React.Component{
             <Navbar />
             <h1>As You Are</h1>
             <h3>Discovering ourselves, together.</h3>
-
-
+            <p>Question of the day: How much would would a woodchuck chuck, if a woodchuck could chuck wood?</p>
+            <textarea>How are you feeling?</textarea>
 
          </div>)
     }
