@@ -13,7 +13,7 @@ class Blogs extends React.Component {
         <Navbar />
 
         <h1 style ={styles.header}>Blog Posts</h1>
-        <a style ={styles.createPostLink} href='/blog/new'>Create New Post!</a>
+        <a style ={styles.createPostLink} href='/blog/new'>Write a new note!</a>
         <div>
           <ul style={styles.timeline}>
             {blogs.map((blog, idx) => (

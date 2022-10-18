@@ -11,8 +11,6 @@ class New extends React.Component {
                      <br />            
                      body: <input type='text' name='body' /> 
                      <br />
-                     author: <input type='text' name='author'/>
-                     <br />
                      <input type='submit' value='Create new post!' />
                 </form>
             </div>
@@ -21,3 +19,4 @@ class New extends React.Component {
 }
 
 module.exports = New
+

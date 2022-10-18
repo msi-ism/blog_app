@@ -10,7 +10,7 @@ class Navbar extends React.Component {
         <nav className='navbar'>
           <a href="/">Home</a>
           <a href="/blog">Blogs</a>
-          <a href="/blog/new">Create New Blog</a>
+          <a href="/blog/new">Write a note</a>
           <a href="/users/signup">SignIn/Up</a>
           <a href='/users/signout'>SignOut</a>
         </nav>
@@ -21,11 +21,3 @@ class Navbar extends React.Component {
 
 module.exports = Navbar;
 
-const styles = {
-  container: {
-    display: "flex",
-    justifyContent: "space-between",
-    fontFamily: "Helvetica",
-    backgroundColor: "white",
-  },
-};

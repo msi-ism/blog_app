@@ -3,45 +3,69 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: auto;
+  height: 100%;
   width: 100%;
 }
 
-
+/* ^ Body */
 body {
-  background-color: white;
+  background-image: linear-gradient(
+    65deg,
+    hsl(173deg 71% 77%) 0%,
+    hsl(214deg 55% 87%) 15%,
+    hsl(257deg 69% 80%) 44%,
+    hsl(326deg 92% 69%) 82%,
+    hsl(36deg 79% 65%) 100%
+  );
   font-family: 'Helvetica', cursive;
 
 }
 
+/* ^ NavBar */
+header {
+  display: inline-block;
+  width: 100%;
+}
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
   font-family: "Helvetica";
-  background-color: white;
-
-}
-
-textarea {
+  background-color: black;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 100%;
   text-align: center;
+  
 }
 
+.navbar > a {
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px black;
+  font-size: 1.5em;
+
+}
+
+a:hover {
+  color: ghostwhite;
+}
+
+/* ^ Homepage container  */
 .home-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-self: center;
 }
+
 
 h1 {
   font-family: 'Helvetica';
-  background: antiquewhite;
   margin:0;
   margin-bottom: .5em;
-  padding: 1em;
+  padding-top: 1em;
   text-align: center;
 }
-
 h3 {
   font-family: 'Helvetica';
   margin:0;
@@ -49,16 +73,19 @@ h3 {
   text-align: center;
 }
 
-a {
-  color: orange;
-  text-decoration: none;
-  text-shadow: 1px 1px 1px black;
-  font-size: 1.5em;
+p {
+  align-self: center;
+  text-align: center;
+}
+textarea {
+  width: 500px;
+  height: 250px;
+  align-self: center;
 }
 
-a:hover {
-  color: ghostwhite;
-}
+
+
+
 
 li {
   list-style: none;
@@ -74,8 +101,14 @@ input[type=text] {
 
 input[type=submit] {
   padding: .3em;
-  color: orange;
+  color: black;
   background: mediumseagreen;
   font-size: 1em;
   border-radius: 10%;
+}
+
+.header-img {
+  padding-top: 1em;
+  width: 425px;
+  align-self: center;
 }
