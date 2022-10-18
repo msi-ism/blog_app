@@ -1,10 +1,15 @@
 {
   "name": "blog_app",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.17.0"
+  },
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "seed": "node models/seed.js"
   },
   "keywords": [],
   "author": "",
