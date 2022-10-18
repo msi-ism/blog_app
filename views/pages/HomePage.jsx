@@ -16,7 +16,6 @@ class HomePage extends React.Component{
                     <h3>Discovering ourselves, together.</h3>
                     <p><span className='question-txt'>Question of the day: </span><br /> What is your biggest fear?</p>
                     <textarea placeholder='How are you feeling?'></textarea>
-                    <button>
                 </div>
          </div>)
     }
