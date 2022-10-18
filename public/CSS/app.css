@@ -27,6 +27,13 @@ header {
   width: 100%;
 }
 
+
+.header-img {
+  padding-top: 4em;
+  width: 400px;
+  align-self: center;
+}
+
 .navbar {
   font-family: "Helvetica";
   background-color: black;
@@ -73,18 +80,19 @@ h3 {
   text-align: center;
 }
 
+.question-txt {
+  font-weight: bold;
+}
+
 p {
   align-self: center;
   text-align: center;
 }
 textarea {
   width: 500px;
-  height: 250px;
+  height: 150px;
   align-self: center;
 }
-
-
-
 
 
 li {
@@ -105,10 +113,4 @@ input[type=submit] {
   background: mediumseagreen;
   font-size: 1em;
   border-radius: 10%;
-}
-
-.header-img {
-  padding-top: 1em;
-  width: 425px;
-  align-self: center;
 }

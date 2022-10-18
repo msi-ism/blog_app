@@ -14,8 +14,9 @@ class HomePage extends React.Component{
                     <img className='header-img' src='images/AYA2022wText.png'></img>
                     <h1>Notes to Self</h1>
                     <h3>Discovering ourselves, together.</h3>
-                    <p>Question of the day: <br /> What is your biggest fear?</p>
+                    <p><span className='question-txt'>Question of the day: </span><br /> What is your biggest fear?</p>
                     <textarea placeholder='How are you feeling?'></textarea>
+                    <button>
                 </div>
          </div>)
     }

@@ -48,7 +48,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    margin: '10px',
+    margin: '20px',
     padding: '40px'
   },
   header: {
@@ -65,7 +65,9 @@ const styles = {
     backgroundColor: '#fff',
     padding: '5px',
     borderRadius: '5px',
-    textDecoration: 'none'
+    textDecoration: 'none',
+    marginLeft: '20px',
+    marginBottom: '20px'
   },
   item: {
     backgroundColor: 'white',
