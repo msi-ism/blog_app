@@ -15,7 +15,13 @@ class HomePage extends React.Component{
                     <h1>Notes to Self</h1>
                     <h3>Discovering ourselves, together.</h3>
                     <p><span className='question-txt'>Question of the day: </span><br /> What is your biggest fear?</p>
-                    <textarea placeholder='How are you feeling?'></textarea>
+                    {/* <textarea placeholder='How are you feeling?'></textarea> */}
+                    <div class='post-it' >
+	                    <h2>Note to Self:</h2>
+                        <ul>
+                            <li contenteditable='true'>Click Here to write your note.</li>
+                        </ul>
+                    </div>    
                 </div>
          </div>)
     }
