@@ -69,6 +69,7 @@ a:hover {
 
 h1 {
   font-family: 'Pacifico';
+  font-size: 100px;
   margin:0;
   margin-bottom: .5em;
   padding-top: 1em;
@@ -88,11 +89,13 @@ h3 {
 
 .question-txt {
   font-weight: bold;
+  font-size: 35px;
 }
 
 p {
   align-self: center;
   text-align: center;
+  font-size: 16px;
 }
 textarea {
   width: 500px;
@@ -181,11 +184,6 @@ input[type=submit] {
 
 .done {
   text-decoration:line-through; 
-}
-
-h1 {
-  font-size:25px; 
- position:relative;
 }
 
 

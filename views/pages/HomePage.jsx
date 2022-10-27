@@ -11,10 +11,10 @@ class HomePage extends React.Component{
                     <Navbar />
                 </header>
                 <div className='home-container'>
-                    <img className='header-img' src='images/AYA2022wText.png'></img>
+                    {/* <img className='header-img' src='images/AYA2022wText.png'></img> */}
                     <h1>Notes to Self</h1>
-                    <h3>Discovering ourselves, together.</h3>
-                    <p><span className='question-txt'>Question of the day: </span><br /> What is your biggest fear?</p>
+                    {/* <h3>Discovering ourselves, together.</h3> */}
+                    <p><span className='question-txt'>Question of the day: </span><br /><br />In what ways could you take better care of yourself?</p>
                     {/* <textarea placeholder='How are you feeling?'></textarea> */}
                     <div class='post-it' >
 	                    <h2>Note to Self:</h2>
