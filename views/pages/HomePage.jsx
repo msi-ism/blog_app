@@ -17,7 +17,7 @@ class HomePage extends React.Component{
                     <p><span className='question-txt'>Question of the day: </span><br /><br />In what ways could you take better care of yourself?</p>
                     {/* <textarea placeholder='How are you feeling?'></textarea> */}
                     <div class='post-it' >
-	                    <h2>Note to Self:</h2>
+	                    <h2 className='postit-header'>Note to Self:</h2>
                         <ul>
                             <li contenteditable='true'>Click Here to write your note.</li>
                         </ul>

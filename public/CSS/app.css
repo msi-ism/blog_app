@@ -182,9 +182,26 @@ input[type=submit] {
  left:10%;
 }
 
+.postit-header {
+  text-align: center;
+}
+
 .done {
   text-decoration:line-through; 
 }
 
+.signup-box {
+  width: 30%;
+  align-self: center;
+  margin-bottom: 25px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
+
+}
 
 /* sticky notes adapted from: https://codepen.io/jweden/pen/kGBBpM */

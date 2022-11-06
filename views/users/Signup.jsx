@@ -4,11 +4,11 @@ const Navbar = require("../components/Navbar");
 class Signup extends React.Component {
   render() {
     return (
-      <div>
+      <div className='main-container'>
         <Navbar />
         <h1>Create an new account</h1>
 
-        <form action='/users/signup' method='POST'>
+        <form action='/users/signup' method='POST' className="signup-box ">
           <fieldset>
             <legend>Create an account</legend>
 
