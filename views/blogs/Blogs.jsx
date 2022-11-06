@@ -4,20 +4,20 @@ const Navbar = require('../components/Navbar')
 class Blogs extends React.Component {
   render() {
     const { blogs, loggedInUser } = this.props
-    console.log(loggedInUser)
+    console.log('blogs' + loggedInUser)
     return (
       <div>
         <head>
           <link rel='stylesheet' href='/CSS/app.css'></link>
         </head>
-        <Navbar />
+        <Navbar loggedInUser={loggedInUser} />
 
         <h1 style ={styles.header}>Blog Posts</h1>
         <a style ={styles.createPostLink} href='/blog/new'>Write a new note!</a>
-        <div>
-          <ul style={styles.timeline}>
+        <div className='browse-container'>
+          <ul style={styles.timeline} className='browse-container'>
             {blogs.map((blog, idx) => (
-              <li style={styles.item} key={idx}>
+              <li style={styles.item} key={idx} className='post-it'>
                 {" "}
                 <h3>{'@'+ blog.author}</h3>
                 <a href={`blog/${blog._id}`}><h2>{blog.title}</h2></a>
@@ -44,10 +44,6 @@ const styles = {
     alignItems: 'center'
   },
   timeline: {
-    backgroundColor: 'violet',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
     margin: '20px',
     padding: '40px'
   },

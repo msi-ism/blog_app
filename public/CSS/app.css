@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Handlee&family=Pacifico&family=Patrick+Hand+SC&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Handlee&family=Pacifico&family=Patrick+Hand+SC&display=swap");
 
-
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -18,8 +18,7 @@ body {
     hsl(326deg 92% 69%) 82%,
     hsl(36deg 79% 65%) 100%
   );
-  font-family: 'Helvetica', cursive;
-
+  font-family: "Helvetica", cursive;
 }
 
 /* ^ NavBar */
@@ -27,7 +26,6 @@ header {
   display: inline-block;
   width: 100%;
 }
-
 
 .header-img {
   padding-top: 4em;
@@ -42,7 +40,6 @@ header {
   padding-bottom: 1em;
   width: 100%;
   text-align: center;
-  
 }
 
 .navbar > a {
@@ -52,7 +49,6 @@ header {
   text-decoration: none;
   text-shadow: 1px 1px 1px black;
   font-size: 1.5em;
-
 }
 
 a:hover {
@@ -66,24 +62,23 @@ a:hover {
   align-self: center;
 }
 
-
 h1 {
-  font-family: 'Pacifico';
+  font-family: "Pacifico";
   font-size: 100px;
-  margin:0;
-  margin-bottom: .5em;
+  margin: 0;
+  margin-bottom: 0.5em;
   padding-top: 1em;
   text-align: center;
 }
 
 h2 {
-  font-family: 'Gochi Hand', cursive;
+  font-family: "Gochi Hand", cursive;
 }
 
 h3 {
-  font-family: 'Helvetica';
-  margin:0;
-  margin-bottom: .5em;
+  font-family: "Helvetica";
+  margin: 0;
+  margin-bottom: 0.5em;
   text-align: center;
 }
 
@@ -103,7 +98,6 @@ textarea {
   align-self: center;
 }
 
-
 li {
   list-style: none;
 }
@@ -112,12 +106,12 @@ li a {
   color: blueviolet;
 }
 
-input[type=text] {
-  padding: .3em;
+input[type="text"] {
+  padding: 0.3em;
 }
 
-input[type=submit] {
-  padding: .3em;
+input[type="submit"] {
+  padding: 0.3em;
   color: black;
   background: mediumseagreen;
   font-size: 1em;
@@ -127,59 +121,66 @@ input[type=submit] {
 /* * Sticky Notes */
 
 .post-it {
-  width:250px;
- height:240px;
- position:relative;
- background:#ffa;
- overflow:hidden;
- margin:30px auto;
- padding:20px;
- border-radius:0 0 0 30px/45px;
- box-shadow:
-   inset 0 -40px 40px rgba(0,0,0,0.2),
-   inset 0 25px 10px rgba(0,0,0,0.2),
-   0 5px 6px 5px rgba(0,0,0,0.2);
- font-family: 'Permanent Marker', cursive;
- line-height:1.7em;
- font-size:19px;
- -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  height: 240px;
+  position: relative;
+  background: #ffa;
+  overflow: hidden;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 0 0 0 30px/45px;
+  box-shadow: inset 0 -40px 40px rgba(0, 0, 0, 0.2),
+    inset 0 25px 10px rgba(0, 0, 0, 0.2), 0 5px 6px 5px rgba(0, 0, 0, 0.2);
+  font-family: "Permanent Marker", cursive;
+  /* line-height: 1.7em; */
+  font-size: 19px;
+  -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
 
- color:#130d6b;
+  color: #130d6b;
 }
+
+.browse-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+}
+
 
 .post-it li {
-  cursor:pointer;
-  border: 1px solid black;
-  margin-left: -30px;
-  font-family: 'Gochi Hand', cursive;
+  cursor: pointer;
+  /* border: 1px solid black; */
+  margin-top: -20px;
+  font-family: "Gochi Hand", cursive;
 }
-
 .post-it:before {
-  content:"";
- display:block;
- position:absolute;
- width:20px;
- height:25px;
- background:#ffa;
- box-shadow:
-   3px -2px 10px rgba(0,0,0,0.2),
-   inset 15px -15px 15px rgba(0,0,0,0.3);
- left:0;
- bottom:0;
- z-index:2;
- transform:skewX(25deg);
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 25px;
+  background: #ffa;
+  box-shadow: 3px -2px 10px rgba(0, 0, 0, 0.2),
+    inset 15px -15px 15px rgba(0, 0, 0, 0.3);
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  transform: skewX(25deg);
 }
 
 .post-it:after {
-  content:"";
- display:block;
- position:absolute;
- width:75%;
- height:20px; 
- /* border-top:3px solid #130d6b; */
- border-radius: 50% ;
- bottom:0px;
- left:10%;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 75%;
+  height: 20px;
+  /* border-top:3px solid #130d6b; */
+  border-radius: 50%;
+  bottom: 0px;
+  left: 10%;
 }
 
 .postit-header {
@@ -187,7 +188,7 @@ input[type=submit] {
 }
 
 .done {
-  text-decoration:line-through; 
+  text-decoration: line-through;
 }
 
 .signup-box {
@@ -201,7 +202,6 @@ input[type=submit] {
   flex-direction: column;
   justify-items: center;
   align-content: center;
-
 }
 
 /* sticky notes adapted from: https://codepen.io/jweden/pen/kGBBpM */

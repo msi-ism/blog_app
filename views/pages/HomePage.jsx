@@ -1,14 +1,21 @@
 const React = require('react')
+const ReactDom = require('react-dom')
 const Navbar = require('../components/Navbar')
+
+let fillerText = 'What on your mind?'
+
+
 
 class HomePage extends React.Component{
     render(){
+        const {loggedInUser} = this.props
+        console.log('home' + loggedInUser)
         return(<div>
                 <head>
                     <link rel='stylesheet' href='/CSS/app.css'></link>
                 </head>
                 <header>
-                    <Navbar />
+                    <Navbar loggedInUser={loggedInUser}/>
                 </header>
                 <div className='home-container'>
                     {/* <img className='header-img' src='images/AYA2022wText.png'></img> */}
@@ -19,7 +26,8 @@ class HomePage extends React.Component{
                     <div class='post-it' >
 	                    <h2 className='postit-header'>Note to Self:</h2>
                         <ul>
-                            <li contenteditable='true'>Click Here to write your note.</li>
+                            <li className='input-box' contentEditable='true' onClick={() => {fillerText = ''}}>{fillerText}</li>
+    
                         </ul>
                     </div>    
                 </div>

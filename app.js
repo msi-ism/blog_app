@@ -42,7 +42,7 @@ app.use('/users', require('./controllers/UserRouter'))
 
 
 app.get('/', (req, res) => {
-    res.render('pages/HomePage')
+    res.render('pages/HomePage', {loggedInUser: req.session.username} )
 })
 
 
