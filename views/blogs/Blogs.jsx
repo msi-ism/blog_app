@@ -19,10 +19,10 @@ class Blogs extends React.Component {
             {blogs.map((blog, idx) => (
               <li style={styles.item} key={idx} className='post-it'>
                 {" "}
-                <h3>{'@'+ blog.author}</h3>
                 <a href={`blog/${blog._id}`}><h2>{blog.title}</h2></a>
                 <p>{blog.body}</p>
                 <p style={styles.likes}>&hearts; {blog.likes}</p>
+                <p>{'@'+ blog.author}</p>
                 {blog.author === loggedInUser ? (<a style={styles.createPostLink} href={`blog/${blog._id}/edit`}>Edit Post!</a>) : null }
                 {blog.author === loggedInUser ? (<form action={`/blog/${blog._id}?_method=DELETE`} method='POST'>
                     <input type='submit' value='Delete post!' />

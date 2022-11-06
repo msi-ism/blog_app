@@ -156,6 +156,12 @@ input[type="submit"] {
   margin-top: -20px;
   font-family: "Gochi Hand", cursive;
 }
+
+.post-it p {
+  margin-top: -20px;
+  font-family: "Gochi Hand", cursive;
+
+}
 .post-it:before {
   content: "";
   display: block;
