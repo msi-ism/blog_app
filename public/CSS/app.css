@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Handlee&family=Pacifico&family=Patrick+Hand+SC&display=swap");
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  width: 100%;
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
 
 /* ^ Body */
@@ -19,6 +20,8 @@ body {
     hsl(36deg 79% 65%) 100%
   );
   font-family: "Helvetica", cursive;
+  height: 100%;
+  width: 100%;
 }
 
 /* ^ NavBar */
@@ -143,14 +146,6 @@ input[type="submit"] {
   color: #130d6b;
 }
 
-.browse-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  width: 100%;
-  height: auto;
-}
-
 
 .post-it li {
   cursor: pointer;
@@ -227,21 +222,52 @@ font-size: 12px;
   margin-bottom: 25px;
 }
 
-.main-container {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-content: center;
+
+
+.main-container > .auth-text {
+  align-self: center;
 }
 
-.create-post-link {
+
+
+/** Blog Page */
+
+.page-title {
+  margin-top: -70px;
+}
+
+.main-container > .create-post-link {
   background-color: #fff;
   padding: 5px;
   border-radius: 5px;
   text-decoration: none;
   margin-left: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+  width: 125px;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.main-container > .bulletin-board {
+  background-color: brown;
+  width: 100%;
+  height: 100%;
+}
+
+.bulletin-board > .browse-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
 
 /* sticky notes adapted from: https://codepen.io/jweden/pen/kGBBpM */

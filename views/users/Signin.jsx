@@ -22,8 +22,7 @@ class Signin extends React.Component {
             <input type="submit" value="Sign-In"></input>
           </fieldset>
         </form>
-
-        <div>
+        <div className="auth-text">
           <p>
             Need an account? <a href="/users/signup">SignUp</a>{" "}
           </p>
@@ -33,4 +32,4 @@ class Signin extends React.Component {
   }
 }
 
-module.exports = Signin;
+module.exports = Signin

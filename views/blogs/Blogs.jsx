@@ -6,16 +6,15 @@ class Blogs extends React.Component {
     const { blogs, loggedInUser } = this.props
     console.log('blogs' + loggedInUser)
     return (
-      <div>
+      <div className="main-container">
         <head>
           <link rel='stylesheet' href='/CSS/app.css'></link>
         </head>
         <Navbar loggedInUser={loggedInUser} />
-
-        <h1>Blog Posts</h1>
+        <h1 className='page-title'>Bulletin Board</h1>
         <a href='/blog/new' className='create-post-link'>Write a new note!</a>
-        <div >
-          <ul  className='browse-container'>
+        <div className="bulletin-board">
+          <ul className='browse-container'>
             {blogs.map((blog, idx) => (
               <li  key={idx} className='post-it'>
                 {" "}

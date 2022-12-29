@@ -28,7 +28,7 @@ class Signup extends React.Component {
           </fieldset>
         </form>
 
-        <div>
+        <div className='auth-text'>
           <p>
             Already have an Account? <a href="/users/signin">Signin</a>{" "}
           </p>
