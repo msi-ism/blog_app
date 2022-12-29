@@ -12,7 +12,9 @@ class Blogs extends React.Component {
         </head>
         <Navbar loggedInUser={loggedInUser} />
         <h1 className='page-title'>Bulletin Board</h1>
-        <a href='/blog/new' className='create-post-link'>Write a new note!</a>
+          <div className="create-post-div">
+            <a href='/blog/new' className='create-post-link'>Write a new note!</a>
+          </div>
         <div className="bulletin-board">
           <ul className='browse-container'>
             {blogs.map((blog, idx) => (
