@@ -29,9 +29,10 @@ class HomePage extends React.Component{
                     {/* <textarea placeholder='How are you feeling?'></textarea> */}
                     <div class='post-it' >
 	                    <h2 className='postit-header'>Note to Self:</h2>
-                        <ul>
+                        {/* <ul>
                             <li className='input-box' contentEditable='true' onClick={clearFillerText}>{fillerText}</li>
-                        </ul>
+                        </ul> */}
+                        <textarea className='input-box' type='text' placeholder="What's on your mind?"></textarea>
                     </div>    
                 </div>
          </div>)

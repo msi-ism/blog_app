@@ -207,9 +207,9 @@ font-size: 12px;
 }
 
 .input-box {
-  text-align: center;
+  width: 75%;
+  height: 50%;
   align-self: center;
-  margin-left: -45px;
 }
 
 .done {
