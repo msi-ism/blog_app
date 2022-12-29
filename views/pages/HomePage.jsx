@@ -2,7 +2,11 @@ const React = require('react')
 const ReactDom = require('react-dom')
 const Navbar = require('../components/Navbar')
 
-let fillerText = 'What on your mind?'
+let fillerText = "What's on your mind?"
+
+let clearFillerText = () => {
+    fillerText = ''
+}
 
 
 
@@ -26,8 +30,7 @@ class HomePage extends React.Component{
                     <div class='post-it' >
 	                    <h2 className='postit-header'>Note to Self:</h2>
                         <ul>
-                            <li className='input-box' contentEditable='true' onClick={() => {fillerText = ''}}>{fillerText}</li>
-    
+                            <li className='input-box' contentEditable='true' onClick={clearFillerText}>{fillerText}</li>
                         </ul>
                     </div>    
                 </div>
