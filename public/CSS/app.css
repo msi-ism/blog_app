@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Handlee&family=Pacifico&family=Patrick+Hand+SC&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Lato:wght@300&family=Mukta&family=Poppins:wght@300&family=Prompt&display=swap');
+
 html,body
 {
     width: 100%;
@@ -19,7 +21,6 @@ body {
     hsl(326deg 92% 69%) 82%,
     hsl(36deg 79% 65%) 100%
   );
-  font-family: "Helvetica", cursive;
   height: 100%;
   width: 100%;
 }
@@ -37,7 +38,7 @@ header {
 }
 
 .navbar {
-  font-family: "Helvetica";
+  font-family: "Mukta";
   background-color: black;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -55,7 +56,11 @@ header {
 }
 
 a:hover {
-  color: ghostwhite;
+  color: palegreen;
+}
+
+a {
+  color: black;
 }
 
 /* ^ Homepage container  */
@@ -78,9 +83,6 @@ h1 {
 
 }
 
-h2 {
-  font-family: "Gochi Hand", cursive;
-}
 
 h3 {
   font-family: "Helvetica";
@@ -109,21 +111,22 @@ li {
 }
 
 li a {
-  color: blueviolet;
+  color: black;
 }
 
 input[type="text"] {
   padding: 0.3em;
 }
 
-input[type="submit"] {
+.note-submit {
   margin-top: 35px;
   padding: 0.3em;
-  color: black;
+  color: white;
   background: rgb(163, 98, 163);
   font-size: 12px;
   border-radius: 10%;
   height: 25px;
+  cursor: pointer;
 }
 
 /* * Sticky Notes */
@@ -131,8 +134,8 @@ input[type="submit"] {
 .post-it {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
-  width: 275px;
-  height: 240px;
+  width: 300px;
+  height: 275px;
   position: relative;
   background: #ffa;
   overflow: hidden;
@@ -141,7 +144,6 @@ input[type="submit"] {
   border-radius: 0 0 0 30px/45px;
   box-shadow: inset 0 -40px 40px rgba(0, 0, 0, 0.2),
     inset 0 25px 10px rgba(0, 0, 0, 0.2), 0 5px 6px 5px rgba(0, 0, 0, 0.2);
-  font-family: "Permanent Marker", cursive;
   /* line-height: 1.7em; */
   font-size: 16px;
   -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
@@ -153,7 +155,7 @@ input[type="submit"] {
   cursor: pointer;
   /* border: 1px solid black; */
   margin-top: -20px;
-  font-family: "Gochi Hand", cursive;
+  font-family: "Prompt";
 
 }
 
@@ -200,68 +202,90 @@ input[type="submit"] {
 }
 
 .post-it > .post-it-top {
-  font-family: 'Helvetica';
-  font-size: 16px;
-  margin-top: -5px;
+  font-size: 14px;
   grid-row-start: 1;
+  font-family: 'Mukta';
+  height: auto;
 }
 .post-it-top > .post-it-title {
-  font-family: 'Helvetica';
-  font-size: 16px;
-  margin-top: -5px;
   grid-row-start: 1;
   text-align: center;
+  height: auto;
 }
 
 .post-it-top > .post-it-username {
   text-align: left;
-  font-family: 'Helvetica';
-  font-size: 12px;
+  font-family: 'Dosis';
+  font-size: 14px;
   grid-row-start: 1;
+  padding-left: 5px;
+  font-weight: 700;
   }
 
 
 .post-it-body {
-  margin-top: 0px;
+  margin-top: -0px;
   grid-row-start: 2;
+  padding-left: 5px;
 }
 
 .post-it-bottom {
   display: flex;
   flex-direction: row;
   height: auto;
-  background-color: red;
   gap: 5px;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
   grid-row-start: 3;
-
+  padding-right: 10px;
+  padding-top: 50px;
 }
 
 .post-it-bottom > .post-it-likes {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: auto;
   justify-content: center;
-  margin-top: 35px;
-  
 
 }
 .post-it-bottom > .post-it-edit {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 100%;
-  margin-top: 25px;
+  width: 20px;
+  height: 20px;
 }
 .post-it-bottom > .post-it-delete {
   display: flex;
-  width: 100%;
+  height: 100%;
+  width: auto;
   justify-content: center;
   align-content: center;
-  margin-top: -10px;
+
 }
 
+.delete-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: auto;
+  padding:0;
+  margin:0;
+}
+
+.delete-container > .delete-input {
+  width: auto;
+  margin: 0;
+  padding: 0px;
+  border: none;
+}
+
+.delete-container > .delete-img {
+  width: 20px;
+  height: 20px;
+
+}
 
 
 
@@ -327,7 +351,8 @@ input[type="submit"] {
   text-decoration: none;
   margin-right: 30px;
   margin-bottom: 35px;
-  width: 125px;
+  width: auto;
+  font-family: 'Mukta';
   
 }
 
@@ -341,13 +366,12 @@ input[type="submit"] {
 }
 
 .main-container > .bulletin-board {
-  background-color: brown;
   width: auto;
-  height: 100%;
-  border: 30px solid rgb(125, 85, 51);
+  height: 750px;
+  border: 35px solid rgb(86, 61, 39);
   background: url(/images/cork-board.png);
   margin: 30px;
-  padding: 30px;
+  padding: 25px;
 }
 
 .bulletin-board > .browse-container {

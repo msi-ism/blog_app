@@ -1,6 +1,7 @@
 const React = require("react")
 const Navbar = require('../components/Navbar')
 
+
 class Blogs extends React.Component {
   render() {
     const { blogs, loggedInUser } = this.props
@@ -27,9 +28,12 @@ class Blogs extends React.Component {
                 <p className='post-it-body'>{blog.body}</p>
                 <div className='post-it-bottom'>
                   <p className="post-it-likes">&hearts; {blog.likes}</p>
-                  {blog.author === loggedInUser ? (<a className='post-it-edit' href={`blog/${blog._id}/edit`}>Edit Post!</a>) : null }
+                  {blog.author === loggedInUser ? (<a className='post-it-edit' href={`blog/${blog._id}/edit`}><img src='/images/edit.png'></img></a>) : null }
                   {blog.author === loggedInUser ? (<form className='post-it-delete' action={`/blog/${blog._id}?_method=DELETE`} method='POST'>
-                      <input type='submit' value='Delete post!' />
+                    <div className='delete-container'>
+                        <input className='delete-input' type='submit' value=''></input>
+                        <img className='delete-img' src='/images/trash.png'></img>
+                    </div>
                   </form>) : null }
                 </div>
               </li>
