@@ -163,11 +163,13 @@ input[type="text"] {
   font-family: "Gochi Hand", cursive;
   text-align: left;
 }
+
+
+
+
 .note-body {
   font-family: "Gochi Hand", cursive;
 }
-
-
 
 .post-it:before {
   content: "";
@@ -261,8 +263,33 @@ input[type="text"] {
   width: auto;
   justify-content: center;
   align-content: center;
-
 }
+
+
+/** Titling Post-its */
+
+ul li {
+  transform: rotate(-6deg);
+}
+
+ul li:nth-child(even) {
+  transform:rotate(4deg);
+  position:relative;
+  top:5px;
+}
+ul li:nth-child(3n) {
+  transform:rotate(-3deg);
+  position:relative;
+  top:-5px;
+}
+ul li:nth-child(5n){
+  transform:rotate(5deg);
+  position:relative;
+  top:-10px;
+}
+
+
+
 
 .delete-container {
   display: flex;
@@ -368,7 +395,7 @@ input[type="text"] {
 .main-container > .bulletin-board {
   width: auto;
   height: 750px;
-  border: 35px solid rgb(86, 61, 39);
+  border: 45px solid rgb(86, 61, 39);
   background: url(/images/cork-board.png);
   margin: 30px;
   padding: 25px;
