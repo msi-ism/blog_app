@@ -78,6 +78,7 @@ h1 {
   font-size: 100px;
   margin: 0;
   text-align: center;
+  align-self: center;
 }
 
 
@@ -110,6 +111,7 @@ li {
 
 li a {
   color: black;
+  text-decoration: none;
 }
 
 input[type="text"] {
@@ -131,9 +133,9 @@ input[type="text"] {
 
 .post-it {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  width: 300px;
-  height: 275px;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  width: 250px;
+  height: 225px;
   position: relative;
   background: #ffa;
   overflow: hidden;
@@ -204,6 +206,7 @@ input[type="text"] {
 .post-it > .post-it-top {
   font-size: 14px;
   grid-row-start: 1;
+  grid-row-end: 1;
   font-family: 'Mukta';
   height: auto;
 }
@@ -212,51 +215,66 @@ input[type="text"] {
   text-align: center;
   height: auto;
   font-family: 'Mukta';
+  margin-top: -2px;
+  font-size: 18px;
 }
 
-.post-it-top > .post-it-username {
-  text-align: left;
+
+
+.post-it-body {
+  margin-top: -10px;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  padding-left: 5px;
+  height: 100%;
+}
+
+.post-it-bottom {
+  display: grid;
+  grid-template-columns: 3;
+  height: auto;
+  gap: 5px;
+  align-items: center;
+  grid-row-start: 4;
+  padding-right: 10px;
+
+}
+.post-it-bottom > .post-it-username {
+  grid-column-start: 1;
   font-family: 'Dosis';
   font-size: 14px;
-  grid-row-start: 1;
-  padding-left: 5px;
+  padding-left: 10px;
   font-weight: 700;
   }
 
 
-.post-it-body {
-  margin-top: -0px;
-  grid-row-start: 2;
-  padding-left: 5px;
-}
 
-.post-it-bottom {
+.post-it-bottom > .user-icos {
+  grid-column-start: 3;
   display: flex;
   flex-direction: row;
-  height: auto;
-  gap: 5px;
+  justify-content: center;
   align-items: center;
-  justify-content: right;
-  grid-row-start: 3;
-  padding-right: 10px;
-  padding-top: 50px;
+  align-self: right;
+  gap: 4px;
+  margin-right: -10px;
 }
 
-.post-it-bottom > .post-it-likes {
+.user-icos > .post-it-likes {
   display: flex;
   flex-direction: row;
   width: auto;
   justify-content: center;
 
 }
-.post-it-bottom > .post-it-edit {
+.user-icos > .post-it-edit {
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 20px;
   height: 20px;
 }
-.post-it-bottom > .post-it-delete {
+.user-icos > .post-it-delete {
   display: flex;
   height: 100%;
   width: auto;
@@ -362,9 +380,10 @@ ul li:nth-child(5n){
 
 
 .main-container > .create-post-div {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
   width: 100%;
-  justify-content: right;
+  align-items: center;
 }
 
 
@@ -373,11 +392,15 @@ ul li:nth-child(5n){
   padding: 5px;
   border-radius: 5px;
   text-decoration: none;
-  margin-right: 30px;
-  margin-bottom: 35px;
   width: auto;
   font-family: 'Mukta';
+  grid-column-start: 3;
+  justify-self: center;
   
+}
+
+.create-post-div > .page-title {
+  grid-column-start: 2;
 }
 
 .main-container {
@@ -390,12 +413,13 @@ ul li:nth-child(5n){
 }
 
 .main-container > .bulletin-board {
-  width: auto;
+  width: 75vw;
   height: auto;
   border: 45px solid rgb(86, 61, 39);
   background: url(/images/cork-board.png);
   margin: 30px;
   padding: 15px;
+  align-self: center;
 }
 
 .bulletin-board > .browse-container {
