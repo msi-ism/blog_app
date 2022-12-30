@@ -20,14 +20,18 @@ class Blogs extends React.Component {
             {blogs.map((blog, idx) => (
               <li  key={idx} className='post-it'>
                 {" "}
-                <p className="post-it-username">{'@'+ blog.author}</p>
-                <a href={`blog/${blog._id}`}><h2 className="post-it-title">{blog.title}</h2></a>
+                <div className='post-it-top'>
+                  <p className="post-it-username">{'@'+ blog.author}</p>
+                  <a href={`blog/${blog._id}`}><h2 className="post-it-title">{blog.title}</h2></a>
+                </div>
                 <p className='post-it-body'>{blog.body}</p>
-                <p className="post-it-likes">&hearts; {blog.likes}</p>
-                {blog.author === loggedInUser ? (<a  href={`blog/${blog._id}/edit`}>Edit Post!</a>) : null }
-                {blog.author === loggedInUser ? (<form action={`/blog/${blog._id}?_method=DELETE`} method='POST'>
-                    <input type='submit' value='Delete post!' />
-                </form>) : null }
+                <div className='post-it-bottom'>
+                  <p className="post-it-likes">&hearts; {blog.likes}</p>
+                  {blog.author === loggedInUser ? (<a className='post-it-edit' href={`blog/${blog._id}/edit`}>Edit Post!</a>) : null }
+                  {blog.author === loggedInUser ? (<form className='post-it-delete' action={`/blog/${blog._id}?_method=DELETE`} method='POST'>
+                      <input type='submit' value='Delete post!' />
+                  </form>) : null }
+                </div>
               </li>
             ))}
           </ul>

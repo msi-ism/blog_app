@@ -123,13 +123,14 @@ input[type="submit"] {
   background: rgb(163, 98, 163);
   font-size: 12px;
   border-radius: 10%;
+  height: 25px;
 }
 
 /* * Sticky Notes */
 
 .post-it {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
   width: 275px;
   height: 240px;
   position: relative;
@@ -164,11 +165,7 @@ input[type="submit"] {
   font-family: "Gochi Hand", cursive;
 }
 
-.post-it > .post-it-username {
-text-align: left;
-font-family: 'Helvetica';
-font-size: 12px;
-}
+
 
 .post-it:before {
   content: "";
@@ -201,6 +198,73 @@ font-size: 12px;
   text-align: center;
   padding: 0;
 }
+
+.post-it > .post-it-top {
+  font-family: 'Helvetica';
+  font-size: 16px;
+  margin-top: -5px;
+  grid-row-start: 1;
+}
+.post-it-top > .post-it-title {
+  font-family: 'Helvetica';
+  font-size: 16px;
+  margin-top: -5px;
+  grid-row-start: 1;
+  text-align: center;
+}
+
+.post-it-top > .post-it-username {
+  text-align: left;
+  font-family: 'Helvetica';
+  font-size: 12px;
+  grid-row-start: 1;
+  }
+
+
+.post-it-body {
+  margin-top: 0px;
+  grid-row-start: 2;
+}
+
+.post-it-bottom {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  background-color: red;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  grid-row-start: 3;
+
+}
+
+.post-it-bottom > .post-it-likes {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  margin-top: 35px;
+  
+
+}
+.post-it-bottom > .post-it-edit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-top: 25px;
+}
+.post-it-bottom > .post-it-delete {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  margin-top: -10px;
+}
+
+
+
+
 
 .input-box {
   width: 75%;
