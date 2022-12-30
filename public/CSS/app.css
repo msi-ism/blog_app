@@ -119,13 +119,13 @@ input[type="text"] {
 }
 
 .note-submit {
-  margin-top: 35px;
+  margin-top: 45px;
   padding: 0.3em;
   color: white;
   background: rgb(163, 98, 163);
   font-size: 12px;
   border-radius: 10%;
-  height: 25px;
+  height: auto;
   cursor: pointer;
 }
 
@@ -415,7 +415,7 @@ ul li:nth-child(5n){
 .main-container > .bulletin-board {
   width: 75vw;
   height: auto;
-  border: 45px solid rgb(86, 61, 39);
+  border: 45px solid rgb(40, 26, 13);
   background: url(/images/cork-board.png);
   margin: 30px;
   padding: 15px;

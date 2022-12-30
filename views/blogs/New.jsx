@@ -23,8 +23,8 @@ class New extends React.Component {
               <div class="post-it">
                 <h2 className="post-it-title">Note to Self:</h2>
                 <form action='/blog' method='POST'>
-                    <textarea type='text' name='title' className="input-box-title" placeholder="Title (30 character max)" maxLength={30}/>
-                    <textarea name='body' className="input-box" type="text" placeholder="What's on your mind?"></textarea>
+                    <textarea autoFocus type='text' name='title' className="input-box-title" placeholder="Title (30 character max)" maxLength={30}></textarea>
+                    <textarea name='body' className="input-box" type="text" placeholder="What's on your mind?" maxLength={50}></textarea>
                     <input className='note-submit' type='submit' value='Submit note!' />
                 </form>
               </div>
