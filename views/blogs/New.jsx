@@ -21,7 +21,7 @@ class New extends React.Component {
                 <span className="question-txt">Write a note to help your future self: </span>
               </p>
               <div class="post-it">
-                <h2 className="postit-header">Note to Self:</h2>
+                <h2 className="post-it-title">Note to Self:</h2>
                 <form action='/blog' method='POST'>
                     <textarea type='text' name='title' className="input-box-title" placeholder="Title (30 character max)" maxLength={30}/>
                     <textarea name='body' className="input-box" type="text" placeholder="What's on your mind?"></textarea>

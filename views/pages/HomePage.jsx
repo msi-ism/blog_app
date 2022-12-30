@@ -25,14 +25,11 @@ class HomePage extends React.Component {
           <h1>Notes to Self</h1>
           {/* <h3>Discovering ourselves, together.</h3> */}
           <p>
-            <span className="question-txt">Question of the day: </span>
-            <br />
-            <br />
-            In what ways could you take better care of yourself?
+            <span className="question-txt">What's something that you need to be reminded of?</span>
           </p>
           {/* <textarea placeholder='How are you feeling?'></textarea> */}
           <div class="post-it">
-            <h2 className="postit-header">Note to Self:</h2>
+            <h2 className="post-it-title">Note to Self:</h2>
             {/* <ul>
                             <li className='input-box' contentEditable='true' onClick={clearFillerText}>{fillerText}</li>
                         </ul> */}
