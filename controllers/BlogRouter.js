@@ -1,4 +1,4 @@
-const { application } = require('express')
+
 const express = require('express')
 const BlogModel = require('../models/BlogSchema')
 
@@ -14,6 +14,11 @@ router.use((req, res, next) => {
     }
 })
 
+// ^ Render New Blog Form
+router.get('/new', (req, res) => {
+    res.render('blogs/New', {loggedInUser: req.session.username})
+})
+
 router.get('/', async(req, res) => {
     try {
         const blogs = await BlogModel.find({})
@@ -26,10 +31,7 @@ router.get('/', async(req, res) => {
     }
 })
 
-// ^ Render New Blog Form
-router.get('/new', (req, res) => {
-    res.render('blogs/New')
-})
+
 
 
 router.get('/:id', async (req, res) => {

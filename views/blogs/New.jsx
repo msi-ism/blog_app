@@ -1,12 +1,12 @@
 const React = require("react");
-const ReactDom = require("react-dom");
 const Navbar = require("../components/Navbar");
 
 
 class New extends React.Component {
     render(){
-        const { loggedInUser } = this.props;
-        console.log("home" + loggedInUser);
+        const { blogs, loggedInUser } = this.props;
+        console.log("new" + loggedInUser);
+        console.log('console working...')
         return(
             <div>
             <head>
@@ -20,8 +20,8 @@ class New extends React.Component {
               <p>
                 <span className="question-txt">Write a note to help your future self: </span>
               </p>
-              <div class="post-it">
-                <h2 className="post-it-title">Note to Self:</h2>
+              <div className="post-it">
+                <h2 className="post-it-title">{"@"+ loggedInUser +"'s Note to Self:"}</h2>
                 <form action='/blog' method='POST'>
                     <textarea autoFocus type='text' name='title' className="input-box-title" placeholder="Title (30 character max)" maxLength={30}></textarea>
                     <textarea name='body' className="input-box" type="text" placeholder="What's on your mind?" maxLength={50}></textarea>

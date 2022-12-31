@@ -5,6 +5,7 @@ class Blogs extends React.Component {
   render() {
     const { blogs, loggedInUser } = this.props;
     console.log("blogs" + loggedInUser);
+    console.log(loggedInUser)
     return (
       <div className="main-container">
         <head>

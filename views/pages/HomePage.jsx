@@ -23,10 +23,10 @@ class HomePage extends React.Component {
                 {" "}
                 <div className="post-it-top">
                   <a>
-                    <h2 className="post-it-title">Alone Time</h2>
+                    <h2 className="post-it-title">Life Lessons</h2>
                   </a>
                 </div>
-                <p className="post-it-body">Sometimes I feel like I'm all alone in this world.</p>
+                <p className="post-it-body">The next lesson you need is right where you are.</p>
                 <div className="post-it-bottom">
                   <p className="post-it-username">{"@" + "marySue"}</p>
                   <div className='user-icos'>
