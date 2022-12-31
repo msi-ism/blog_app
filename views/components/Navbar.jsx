@@ -14,7 +14,7 @@ class Navbar extends React.Component {
           <a href="/blog">Browse Notes</a>
           <a href="/blog/new">Write a note</a>
           { !loggedInUser ? ( <a href="/users/signup">Sign-Up</a> ) : null}
-          { loggedInUser ? ( <a href='/users/signout'>SignOut</a> ) : null}
+          { loggedInUser ? ( <a href='/users/signout'>{"Welcome, @" + loggedInUser + " SignOut"}</a> ) : null}
         </nav>
       </div>
     );
