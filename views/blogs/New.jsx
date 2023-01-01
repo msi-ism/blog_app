@@ -25,7 +25,15 @@ class New extends React.Component {
                 <form action='/blog' method='POST'>
                     <textarea autoFocus type='text' name='title' className="input-box-title" placeholder="Title (30 character max)" maxLength={30}></textarea>
                     <textarea name='body' className="input-box" type="text" placeholder="What's on your mind?" maxLength={50}></textarea>
-                    <input className='note-submit' type='submit' value='Submit note!' />
+                    <div className="new-note-bottom">
+                        <div className="color-picker">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <input className='note-submit' type='submit' value='Submit note!' />
+                    </div>
                 </form>
               </div>
             </div>

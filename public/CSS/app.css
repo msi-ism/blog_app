@@ -432,3 +432,29 @@ ul li:nth-child(5n){
 }
 
 /* sticky notes adapted from: https://codepen.io/jweden/pen/kGBBpM */
+
+.new-note-bottom {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  gap: 50px;
+}
+
+.new-note-bottom > .color-picker {
+  display: flex;
+  flex-direction: row;
+  margin-top: 45px;
+  gap: 5px;
+}
+
+
+.color-picker > .dot {
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
