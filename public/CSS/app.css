@@ -150,6 +150,18 @@ input[type="text"] {
   color: #130d6b;
 }
 
+.post-it:nth-child(1) {
+  background-color:  #ffa;;
+}
+.post-it:nth-child(2) {
+  background-color: lightblue;
+}
+.post-it:nth-child(3) {
+  background-color: lightgreen;
+}
+.post-it:nth-child(4) {
+  background-color: palevioletred;
+}
 
 .post-it li {
   cursor: pointer;
@@ -185,6 +197,21 @@ input[type="text"] {
   z-index: 2;
   transform: skewX(25deg);
 }
+
+
+.post-it:nth-child(1)::before {
+  background:  #ffa;;
+}
+.post-it:nth-child(2)::before {
+  background: lightblue;
+}
+.post-it:nth-child(3)::before {
+  background: lightgreen;
+}
+.post-it:nth-child(4)::before {
+  background: palevioletred;
+}
+
 
 .post-it:after {
   content: "";
@@ -454,7 +481,20 @@ ul li:nth-child(5n){
 .color-picker > .dot {
   height: 15px;
   width: 15px;
-  background-color: #bbb;
   border-radius: 50%;
-  display: inline-block;
+  display: block;
+  cursor: pointer;
+}
+
+.dot:nth-child(1) {
+  background-color:  #ffa;;
+}
+.dot:nth-child(2) {
+  background-color: lightblue;
+}
+.dot:nth-child(3) {
+  background-color: lightgreen;
+}
+.dot:nth-child(4) {
+  background-color: palevioletred;
 }
