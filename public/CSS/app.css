@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Handlee&family=Pacifico&family=Patrick+Hand+SC&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Lato:wght@300&family=Mukta&family=Poppins:wght@300&family=Prompt&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Lato:wght@300&family=Mukta&family=Poppins:wght@300&family=Prompt&family=Rubik&family=Shadows+Into+Light&display=swap');
 html,body
 {
     width: 100%;
@@ -81,6 +80,9 @@ h1 {
   align-self: center;
 }
 
+.home-page-title {
+  margin-top: -75px;
+}
 
 h3 {
   font-family: "Helvetica";
@@ -93,7 +95,7 @@ h3 {
   font-weight: bold;
   font-size: 35px;
   text-align: center;
-  font-family: 'Prompt';
+  font-family: 'Mukta';
 }
 
 p {
@@ -161,7 +163,7 @@ input[type="text"] {
   background-color: lightgreen;
 }
 .post-it:nth-child(4) {
-  background-color: palevioletred;
+  background-color: rgb(231, 84, 219);
 }
 
 .post-it li {
@@ -261,8 +263,9 @@ input[type="text"] {
   text-align: center;
   height: auto;
   font-family: 'Mukta';
+  font-weight: bold;
   margin-top: -2px;
-  font-size: 18px;
+  font-size: 1.15em;
 }
 
 

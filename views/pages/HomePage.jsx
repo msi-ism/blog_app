@@ -15,9 +15,9 @@ class HomePage extends React.Component {
           <Navbar loggedInUser={loggedInUser} />
         </header>
         <div className="home-container">
-          <h1>Notes to Self</h1>
+          <h1 className="home-page-title">Notes to Self</h1>
           <p>
-            <span className="question-txt">What's something that you need to be reminded of?</span>
+            <span className="question-txt">Give yourself a gentle reminder.</span>
           </p>
           <div className="post-it new-post-it">
                 {" "}
