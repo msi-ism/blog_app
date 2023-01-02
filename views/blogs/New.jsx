@@ -20,12 +20,12 @@ handleClick()
 
 const New = ({loggedInUser}) => {
     
-    const [color, setColor] = useState('post-it')
+    // const [color, setColor] = useState('post-it')
 
-    const changeBlue = () => {
-        setColor('post-it-blue')
-        console.log(color)
-    }
+    // const changeBlue = () => {
+    //     setColor('post-it-blue')
+    //     console.log(color)
+    // }
 
 
 
@@ -45,7 +45,7 @@ const New = ({loggedInUser}) => {
             Write a note to help your future self:{" "}
           </span>
         </p>
-        <div className={color} id="post-it">
+        <div className="post-it new-post-it" id="post-it">
           <h2 className="post-it-title">
             {"@" + loggedInUser + "'s Note to Self:"}
           </h2>
@@ -63,7 +63,7 @@ const New = ({loggedInUser}) => {
               className="input-box"
               type="text"
               placeholder="What's on your mind?"
-              maxLength={50}
+              maxLength={100}
             ></textarea>
             <div className="new-note-bottom">
               {/* <div className="color-picker">

@@ -19,7 +19,7 @@ class HomePage extends React.Component {
           <p>
             <span className="question-txt">What's something that you need to be reminded of?</span>
           </p>
-          <div className="post-it">
+          <div className="post-it new-post-it">
                 {" "}
                 <div className="post-it-top">
                   <a>

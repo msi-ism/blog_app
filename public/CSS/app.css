@@ -5,7 +5,7 @@
 html,body
 {
     width: 100%;
-    height: auto;
+    height: 100%;
     margin: 0px;
     padding: 0px;
 
@@ -55,8 +55,8 @@ header {
   font-size: 1.5em;
 }
 
-a:hover {
-  color: palegreen;
+.navbar a:hover {
+  color:rgb(163, 98, 163);
 }
 
 a {
@@ -123,6 +123,7 @@ input[type="text"] {
   padding: 0.3em;
   color: white;
   background: rgb(163, 98, 163);
+  font-family: "Mukta";
   font-size: 12px;
   border-radius: 10%;
   height: auto;
@@ -200,7 +201,7 @@ input[type="text"] {
 
 
 .post-it:nth-child(1)::before {
-  background:  #ffa;;
+  background:  #ffa
 }
 .post-it:nth-child(2)::before {
   background: lightblue;
@@ -212,6 +213,24 @@ input[type="text"] {
   background: palevioletred;
 }
 
+.new-post-it {
+  background-color:#ffa !important;
+}
+
+.new-post-it:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 25px;
+  background: #ffa !important;
+  box-shadow: 3px -2px 10px rgba(0, 0, 0, 0.2),
+    inset 15px -15px 15px rgba(0, 0, 0, 0.3);
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  transform: skewX(25deg);
+}
 
 .post-it:after {
   content: "";
@@ -355,11 +374,9 @@ ul li:nth-child(5n){
 .delete-container > .delete-img {
   width: 20px;
   height: 20px;
+  cursor: pointer;
 
 }
-
-
-
 
 .input-box {
   width: 75%;
