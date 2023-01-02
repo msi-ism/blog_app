@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Dosis&family=Lato:wght@300&family=Mukta&family=Poppins:wght@300&family=Prompt&family=Rubik&family=Shadows+Into+Light&display=swap');
 
 
+/** Document */
 
 html,body
 {
@@ -27,65 +28,13 @@ body {
   width: 100%;
 }
 
-/* ^ NavBar */
-header {
-  display: inline-block;
-  width: 100%;
-}
-
-.header-img {
-  padding-top: 4em;
-  width: 400px;
-  align-self: center;
-}
-
-.navbar {
-  font-family: "Mukta";
-  background-color: black;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  width: 100%;
-  text-align: center;
-}
-
-.navbar > a {
-  padding-left: 20px;
-  padding-right: 20px;
-  color: white;
-  text-decoration: none;
-  text-shadow: 1px 1px 1px black;
-  font-size: 1.5em;
-}
-
-.navbar a:hover {
-  color:rgb(163, 98, 163);
-}
-
-a {
-  color: black;
-}
-
-/* ^ Homepage container  */
-.home-container {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  justify-content: center;
-  text-align: center;
-  height: 100%;
-}
-
 h1 {
   font-family: "Pacifico";
   font-size: 100px;
   margin: 0;
   text-align: center;
   align-self: center;
-  margin-top: 100px;
-}
-
-.home-page-title {
-
+  margin-top: 0px;
 }
 
 h3 {
@@ -95,16 +44,12 @@ h3 {
 
 }
 
-.question-txt {
-  font-weight: bold;
-  font-size: 35px;
-  text-align: center;
+p, legend, label {
+  font-size: 16px;
   font-family: 'Mukta';
 }
 
-p {
-  font-size: 16px;
-}
+
 textarea {
   width: 500px;
   height: 150px;
@@ -124,19 +69,63 @@ input[type="text"] {
   padding: 0.3em;
 }
 
-.note-submit {
-  margin-top: 45px;
-  padding: 0.3em;
-  color: white;
-  background: rgb(163, 98, 163);
-  font-family: "Mukta";
-  font-size: 12px;
-  border-radius: 10%;
-  height: auto;
-  cursor: pointer;
+/* ^ NavBar */
+header {
+  display: inline-block;
+  width: 100%;
 }
 
-/* * Sticky Notes */
+/** Navigation */
+
+.navbar {
+  font-family: "Mukta";
+  background-color: black;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 75px;
+
+}
+
+.navbar > a {
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px black;
+  font-size: 1.5em;
+}
+
+.navbar a:hover {
+  color:rgb(163, 98, 163);
+}
+
+a {
+  color: black;
+}
+
+/** Homepage container  */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+
+.question-txt {
+  font-weight: bold;
+  font-size: 35px;
+  text-align: center;
+  font-family: 'Mukta';
+}
+
+
+
+/** Sticky Notes */
 
 .post-it {
   display: grid;
@@ -157,16 +146,16 @@ input[type="text"] {
   color: #130d6b;
 }
 
-.post-it:nth-child(1) {
+.post-it:nth-child(1n) {
   background-color:  #ffa;;
 }
-.post-it:nth-child(2) {
+.post-it:nth-child(2n) {
   background-color: lightblue;
 }
-.post-it:nth-child(3) {
+.post-it:nth-child(3n) {
   background-color: lightgreen;
 }
-.post-it:nth-child(4) {
+.post-it:nth-child(4n) {
   background-color: rgb(231, 84, 219);
 }
 
@@ -206,16 +195,16 @@ input[type="text"] {
 }
 
 
-.post-it:nth-child(1)::before {
+.post-it:nth-child(1n)::before {
   background:  #ffa
 }
-.post-it:nth-child(2)::before {
+.post-it:nth-child(2n)::before {
   background: lightblue;
 }
-.post-it:nth-child(3)::before {
+.post-it:nth-child(3n)::before {
   background: lightgreen;
 }
-.post-it:nth-child(4)::before {
+.post-it:nth-child(4n)::before {
   background: palevioletred;
 }
 
@@ -294,7 +283,7 @@ input[type="text"] {
 }
 .post-it-bottom > .post-it-username {
   grid-column-start: 1;
-  font-family: 'Dosis';
+  font-family: 'Balsamiq Sans';
   font-size: 14px;
   padding-left: 10px;
   font-weight: 700;
@@ -434,6 +423,8 @@ ul li:nth-child(5n){
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   width: 100%;
+  height: auto;
+  margin-top: -55px;
   align-items: center;
 }
 
@@ -443,6 +434,7 @@ ul li:nth-child(5n){
   padding: 5px;
   border-radius: 5px;
   text-decoration: none;
+  height: auto;
   width: auto;
   font-family: 'Mukta';
   grid-column-start: 3;
@@ -468,7 +460,7 @@ ul li:nth-child(5n){
   height: auto;
   border: 45px solid rgb(40, 26, 13);
   background: url(/images/cork-board.png);
-  margin: 30px;
+
   padding: 15px;
   align-self: center;
 }
@@ -478,7 +470,7 @@ ul li:nth-child(5n){
   flex-wrap: wrap;
   flex-direction: row;
   width: 100%;
-  height: 100%;
+  height: auto;
   padding: 0;
 }
 
@@ -499,6 +491,15 @@ ul li:nth-child(5n){
   flex-direction: row;
   margin-top: 45px;
   gap: 5px;
+}
+
+.new-note-bottom > .note-submit {
+  margin-top: 15%;
+  background-color:rgb(163, 98, 163);
+  padding: 5px;
+  font-size: 14px;
+  font-family: 'Balsamiq Sans';
+  border-radius: 10%;
 }
 
 
