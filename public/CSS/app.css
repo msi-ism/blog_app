@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Handlee&family=Pacifico&family=Patrick+Hand+SC&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Lato:wght@300&family=Mukta&family=Poppins:wght@300&family=Prompt&family=Rubik&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Dosis&family=Lato:wght@300&family=Mukta&family=Poppins:wght@300&family=Prompt&family=Rubik&family=Shadows+Into+Light&display=swap');
+
+
+
 html,body
 {
     width: 100%;
@@ -263,9 +266,9 @@ input[type="text"] {
   grid-row-start: 1;
   text-align: center;
   height: auto;
-  font-family: 'Mukta';
+  font-family: 'Balsamiq Sans';
   font-weight: bold;
-  margin-top: -2px;
+  margin-top: 5px;
   font-size: 1.15em;
 }
 
