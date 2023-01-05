@@ -28,7 +28,7 @@ const BulletinBoard = () => {
               </div>
               <p className="post-it-body">{blog.body}</p>
               <div className="post-it-bottom">
-                <p className="post-it-likes">&hearts; {blog.likes}</p>
+                {/* <p className="post-it-likes">&hearts; {blog.likes}</p> */}
                 {blog.author === loggedInUser ? (
                   <a className="post-it-edit" href={`blog/${blog._id}/edit`}>
                     <img src="/images/edit.png"></img>

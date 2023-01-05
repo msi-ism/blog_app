@@ -30,7 +30,7 @@ class HomePage extends React.Component {
                 <div className="post-it-bottom">
                   <p className="post-it-username">{"@" + "marySue"}</p>
                   <div className='user-icos'>
-                  <p className="post-it-likes">&hearts; 9</p>
+                  {/* <p className="post-it-likes">&hearts; 9</p> */}
                     <a className="post-it-edit">
                       <img src="/images/edit.png"></img>
                     </a>

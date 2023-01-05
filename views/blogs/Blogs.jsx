@@ -32,7 +32,7 @@ class Blogs extends React.Component {
                 <div className="post-it-bottom">
                   <p className="post-it-username">{"@" + blog.author}</p>
                   <div className='user-icos'>
-                  <p className="post-it-likes">&hearts; {blog.likes}</p>
+                  {/* <p className="post-it-likes">&hearts; {blog.likes}</p> */}
                   {blog.author === loggedInUser ? (
                     <a className="post-it-edit" href={`blog/${blog._id}/edit`}>
                       <img src="/images/edit.png"></img>
