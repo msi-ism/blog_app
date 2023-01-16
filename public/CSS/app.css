@@ -5,17 +5,16 @@
 
 /** Document */
 
-html,body
+html, body
 {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 
 }
 
-/* ^ Body */
 body {
+  width: 100%;
+  height: 100%;
   background-image: linear-gradient(
     65deg,
     hsl(173deg 71% 77%) 0%,
@@ -24,8 +23,8 @@ body {
     hsl(326deg 92% 69%) 82%,
     hsl(36deg 79% 65%) 100%
   );
-  height: 100%;
-  width: 100%;
+  background-size: cover;
+
 }
 
 h1 {
@@ -113,6 +112,7 @@ a {
   justify-content: center;
   text-align: center;
   height: 100%;
+  padding-bottom: 10%;
 }
 
 
@@ -451,8 +451,8 @@ ul li:nth-child(5n){
   flex-direction: column;
   justify-items: center;
   align-content: center;
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
 .main-container > .bulletin-board {
@@ -460,9 +460,9 @@ ul li:nth-child(5n){
   height: auto;
   border: 45px solid rgb(40, 26, 13);
   background: url(/images/cork-board.png);
-
   padding: 15px;
   align-self: center;
+  margin-bottom: 5%;
 }
 
 .bulletin-board > .browse-container {
@@ -470,7 +470,6 @@ ul li:nth-child(5n){
   flex-wrap: wrap;
   flex-direction: row;
   width: 100%;
-  height: auto;
   padding: 0;
 }
 
