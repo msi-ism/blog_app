@@ -77,17 +77,41 @@ header {
 /** Navigation */
 
 .navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   font-family: "Mukta";
   background-color: black;
-  padding-top: 1em;
-  padding-bottom: 1em;
   width: 100%;
   text-align: center;
   margin-bottom: 75px;
+  min-height: 70px;
+  align-content: center;
 
 }
 
-.navbar > a {
+
+.navbar > .so-div {
+  grid-column-start: 3;
+  padding-left: 125px;
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px black;
+  font-size: 1.5em;
+
+
+}
+
+.so-div > a {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px black;
+  font-size: 1em;
+
+}
+
+.nav-nav > a {
   padding-left: 20px;
   padding-right: 20px;
   color: white;
@@ -95,6 +119,13 @@ header {
   text-shadow: 1px 1px 1px black;
   font-size: 1.5em;
 }
+
+
+
+.navbar > .nav-nav {
+  grid-column-start: 2;
+}
+
 
 .navbar a:hover {
   color:rgb(163, 98, 163);

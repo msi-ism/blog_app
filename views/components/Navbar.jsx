@@ -10,11 +10,13 @@ class Navbar extends React.Component {
           <link rel="stylesheet" href="/CSS/app.css"></link>
         </head>
         <nav className='navbar'>
-          <a href="/">Home</a>
-          <a href="/blog">Browse Notes</a>
-          <a href="/blog/new">Write a note</a>
-          { !loggedInUser ? ( <a href="/users/signup">Sign-Up</a> ) : null}
-          { loggedInUser ? ( <a href='/users/signout'>{"Welcome, @" + loggedInUser + " SignOut"}</a> ) : null}
+          <div className="nav-nav">
+            <a href="/">Home</a>
+            <a href="/blog">Browse Notes</a>
+            <a href="/blog/new">Write a note</a>
+          </div>
+          { !loggedInUser ? (<div className="so-div"> <a href="/users/signup">Sign-Up</a> </div>) : null}
+          { loggedInUser ? ( <div className="so-div"><>Welcome, {loggedInUser}<a href='/users/signout'>{" SignOut"}</a> </></div>) : null}
         </nav>
       </div>
     );
