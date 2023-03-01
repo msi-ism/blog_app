@@ -72,7 +72,7 @@ router.post('/', async (req, res) => {
 // ^ GET: Edit Page
 router.get('/:id/edit', async (req, res) => {
     const blog = await BlogModel.findById(req.params.id)
-    res.render('blogs/Edit', {blog: blog})
+    res.render('blogs/Edit', {blog: blog, loggedInUser: req.session.username})
 })
 
 // ^ PUT: Edit Blog

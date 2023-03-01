@@ -27,8 +27,6 @@ const New = ({loggedInUser}) => {
     //     console.log(color)
     // }
 
-
-
   console.log("new" + loggedInUser);
   return (
     <div>
