@@ -2,8 +2,11 @@ const React = require("react");
 const ReactDom = require("react-dom");
 const Navbar = require("../components/Navbar");
 
+
+
 class HomePage extends React.Component {
-  render() {
+    render() {
+      
     const { loggedInUser } = this.props;
     console.log("home" + loggedInUser);
     return (
