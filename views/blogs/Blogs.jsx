@@ -50,14 +50,11 @@ class Blogs extends React.Component {
                         >
                           <div className="delete-container">
                             <input
-                              className="delete-input"
-                              type="submit"
-                              value=""
-                            ></input>
-                            <img
                               className="delete-img"
+                              type="image"
+                              value=""
                               src="/images/trash.png"
-                            ></img>
+                            ></input>
                           </div>
                         </form>
                       ) : null}
